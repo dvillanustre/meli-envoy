@@ -1,0 +1,37 @@
+version: '2'
+services:
+  http-middleware:
+    build:
+      context: ./envoy
+      dockerfile: Dockerfile-envoy
+    depends_on:
+      - application
+    links:
+      - application
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "80:80"
+      - "8080:8080"
+    expose:
+      - "80"
+      - "8080"
+    mem_limit: 64MB
+  application:
+    build:
+      context: ./api
+      dockerfile: Dockerfile-api
+    depends_on:
+      - another-api
+    links:
+      - another-api
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - .:/code
+  another-api:
+    build: 
+      context: ./another-api
+      dockerfile: Dockerfile-another-api
+    volumes:
+      - .:/code

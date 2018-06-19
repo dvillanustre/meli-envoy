@@ -1,0 +1,6 @@
+FROM node:latest
+# replace this with your application's default port
+EXPOSE 8080
+WORKDIR /code/another-api
+ENV NODE_ENV="docker-poc-containers"
+CMD ["node","another-api.js"]
