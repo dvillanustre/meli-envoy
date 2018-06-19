@@ -1,0 +1,12 @@
+FROM node:latest
+
+RUN apt-get -q update && \
+    DEBIAN_FRONTEND=noninteractive apt-get -qy install --no-install-recommends iptables iputils-ping curl
+
+
+# replace this with your application's default port
+EXPOSE 8080
+WORKDIR /code/api
+ENV NODE_ENV="docker-poc-containers"
+
+CMD ["/code/api/entrypoint-api.sh"]
