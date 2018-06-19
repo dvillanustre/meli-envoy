@@ -1,4 +1,4 @@
-Yoy need docker-compose [here](https://docs.docker.com/compose/install/).
+Yoy need [docker-compose](https://docs.docker.com/compose/install/).
 You can reproduce both scenarios with folders three_containers/ and one_container/.
 
 # Three Containers
