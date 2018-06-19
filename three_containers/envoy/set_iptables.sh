@@ -22,9 +22,9 @@ set -o nounset
 ENVOY_PORT=$1
 ENVOY_UID=$2
 
-iptables -t nat -N ISTIO_REDIRECT
-iptables -t nat -A ISTIO_REDIRECT -p tcp -j REDIRECT --to-port $ENVOY_PORT
-iptables -t nat -A PREROUTING -j ISTIO_REDIRECT
+#iptables -t nat -N ISTIO_REDIRECT
+#iptables -t nat -A ISTIO_REDIRECT -p tcp -j REDIRECT --to-port $ENVOY_PORT
+#iptables -t nat -A PREROUTING -j ISTIO_REDIRECT
 
 #iptables -t nat -N ISTIO_OUTPUT
 #iptables -t nat -A OUTPUT -p tcp -j ISTIO_OUTPUT

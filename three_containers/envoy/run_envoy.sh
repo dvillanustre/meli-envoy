@@ -22,4 +22,5 @@ ENVOY_USER=$2
 ENVOY_PORT=15001
 
 ./set_iptables.sh $ENVOY_PORT $ENVOY_UID
-su $ENVOY_USER -c 'envoy -c envoy_config.json'
+#su $ENVOY_USER -c 'envoy -c envoy_config.json'
+envoy -c envoy_config.json
