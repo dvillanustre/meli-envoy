@@ -1,5 +1,5 @@
-Yoy need docker-compose.
-You can reproduce both scenarios with.
+Yoy need docker-compose [here](https://docs.docker.com/compose/install/).
+You can reproduce both scenarios with folders three_containers/ and one_container/.
 
 # Three Containers
 
