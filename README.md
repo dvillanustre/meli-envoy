@@ -1,3 +1,6 @@
+Yoy need docker-compose.
+You can reproduce both scenarios with.
+
 # Three Containers
 
 **Run:**
